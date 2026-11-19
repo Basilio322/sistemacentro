@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Salas - Don Bosquito</title>
+    <link rel="shortcut icon" href="../Assets/img/logodb2.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../Assets/css/style.default.css">
+    <link rel="stylesheet" href="../Assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../Assets/css/custom.css">
+    <link rel="stylesheet" href="../Assets/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="../Assets/iconos/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid d-flex align-items-center justify-content-between">
+                <div class="navbar-header">
+                    <a href="dashboard.html" class="navbar-brand">
+                        <div class="brand-text brand-big visible"><strong class="text-dark">Don </strong><strong class="text-white">Bosquito</strong></div>
+                        <div class="brand-text brand-sm"><strong class="text-dark">D</strong><strong class="text-white">B</strong></div>
+                    </a>
+                    <button class="sidebar-toggle"><i class="fas fa-arrow-alt-circle-left"></i></button>
+                </div>
+                <div class="right-menu list-inline no-margin-bottom">
+                    <h3 class="text-white font-weight-bold">Instituto Tecnológico Centro Infantil Don Bosquito</h3>
+                </div>
+                <div class="list-inline-item logout">
+                    <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#logout">Salir</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="d-flex align-items-stretch">
+        <nav id="sidebar">
+            <div class="sidebar-header d-flex align-items-center p-1">
+                <div class="avatar" data-toggle="modal" data-target="#cambiarPass"><img src="../Assets/img/dob23.png" alt="Avatar" class="img-fluid rounded-circle"></div>
+                <div class="title"><h5 class="h4 text-white">Administrador</h5></div>
+            </div>
+            <ul class="list-unstyled">
+                <li><a href="#menuInscripcion" data-toggle="collapse"><strong class="h5 text-white font-weight-bold"> Registro de Inscripción </strong></a>
+                    <ul id="menuInscripcion" class="collapse list-unstyled ">
+                        <li><a href="regninos.html" class="h5 text-white font-weight-bold"> Registro de Niños y Niñas</a></li>
+                        <li><a href="regapoderado.html" class="h5 text-white font-weight-bold"> Registro de Apoderado</a></li>
+                        <li><a href="regcontacto.html" class="h5 text-white font-weight-bold"> Registro Contacto de Emergencia</a></li>
+                        <li><a href="inscripcion.html" class="h5 text-white font-weight-bold"> Registro de Inscripción</a></li>
+                        <li><a href="documentos.html" class="h5 text-white font-weight-bold"> Documentos</a></li>
+                    </ul>
+                </li>
+                <li><a href="#menuSeguimiento" data-toggle="collapse"><strong class="h5 text-white font-weight-bold"> Información y Seguimiento</strong></a>
+                    <ul id="menuSeguimiento" class="collapse list-unstyled ">
+                        <li><a href="historial.html" class="h5 text-white font-weight-bold"> Historial Médico</a></li>
+                        <li><a href="resultadosarea.html" class="h5 text-white font-weight-bold"> Resultados por Área</a></li>
+                        <li><a href="pensiones.html" class="h5 text-white font-weight-bold"> Mensualidades</a></li>
+                    </ul>
+                </li>
+                <li><a href="#menuPersonal" data-toggle="collapse"><strong class="h5 text-white font-weight-bold"> Personal</strong></a>
+                    <ul id="menuPersonal" class="collapse list-unstyled ">
+                        <li><a href="docentes.html"><strong class="h5 text-white font-weight-bold"> Docentes </strong></a></li>
+                        <li><a href="salaasignada.html"><strong class="h5 text-white font-weight-bold"> Asignación de Sala </strong></a></li>
+                        <li><a href="usuarios.html"><strong class="h5 text-white font-weight-bold"> Usuarios </strong></a></li>
+                    </ul>
+                </li>
+                <li><a href="#menuFinanzas" data-toggle="collapse"><strong class="h5 text-white font-weight-bold"> Finanzas</strong></a>
+                    <ul id="menuFinanzas" class="collapse list-unstyled ">
+                        <li><a href="catpagos.html"><strong class="h5 text-white font-weight-bold"> Categoria de Pagos</strong></a></li>
+                        <li><a href="montos.html"><strong class="h5 text-white font-weight-bold"> Montos por categoria</strong></a></li>
+                    </ul>
+                </li>
+                <li><a href="#menuGestion" data-toggle="collapse"><strong class="h5 text-white font-weight-bold"> Gestión</strong></a>
+                    <ul id="menuGestion" class="collapse list-unstyled show">
+                        <li><a href="sala.html"><strong class="h5 text-white font-weight-bold"> Salas</strong></a></li>
+                        <li><a href="gestion.html"><strong class="h5 text-white font-weight-bold"> Gestión</strong></a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="page-content bg-light">
+            <section><div class="container-fluid"><div class="row"><div class="col-lg-12 mt-2">
+                <h1 class="text text-center font-weight-bold">Sala</h1>
+                <div class="row"><div class="col-lg-6 mb-2">
+                    <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modalNuevo"><i class="fa-solid fa-user-plus"></i> Nuevo</button>
+                    <button class="btn btn-danger" type="button"><i class="fa-solid fa-user-minus"></i> Inactivos</button>
+                </div></div>
+                <div class="table-responsive"><table class="table table-hover table-bordered" id="Table">
+                    <thead class="bg-primary"><tr>
+                        <th class="border border-dark">N°</th><th class="border border-dark">Gestión</th>
+                        <th class="border border-dark">Sala</th><th class="border border-dark">Descripción</th>
+                        <th class="border border-dark">Cantidad</th><th class="border border-dark">Cantidad Maxima</th>
+                        <th class="border border-dark">Cantidad Disponible</th><th class="border border-dark">Acciones</th>
+                    </tr></thead>
+                    <tbody><tr><td colspan="8" class="text-center text-muted">No hay datos registrados</td></tr></tbody>
+                </table></div>
+            </div></div></div></section>
+        </div>
+    </div>
+    <div id="modalNuevo" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog"><div class="modal-content bg-white">
+            <div class="modal-header"><h5 class="modal-title text-dark">Nueva Sala</h5><button class="close" data-dismiss="modal"><span>&times;</span></button></div>
+            <form autocomplete="off"><div class="modal-body"><div class="col-md-12"><div class="row">
+                <div class="form-group col-md-6"><label class="h6">Gestión</label>
+                    <select class="form-control"><option value="">Elija la gestión</option></select></div>
+                <div class="form-group col-md-6"><label class="h6">Sala</label><input class="form-control" type="text" placeholder="Nombre de la sala"></div>
+            </div></div>
+            <div class="row">
+                <div class="col-md-6"><div class="form-group"><label class="h6">Cantidad</label><input class="form-control" type="number" placeholder="0"></div></div>
+                <div class="col-md-6"><div class="form-group"><label class="h6">Cantidad Máxima</label><input class="form-control" type="number" placeholder="0"></div></div>
+            </div>
+            <div class="row"><div class="col-lg-12"><div class="form-group"><label class="h6">Descripción</label><input class="form-control" type="text" placeholder="Descripción"></div></div></div>
+            </div>
+            <div class="card-footer"><button class="btn btn-primary" type="submit">Registrar</button><button class="btn btn-danger" type="button" data-dismiss="modal">Cancelar</button></div>
+            </form>
+        </div></div>
+    </div>
+    <div id="cambiarPass" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog"><div class="modal-content">
+            <div class="modal-header"><h5 class="modal-title text-white">Modificar Contraseña</h5><button class="close" data-dismiss="modal"><span>&times;</span></button></div>
+            <div class="modal-body"><form>
+                <div class="form-group"><label>Contraseña Actual</label><input class="form-control" type="password"></div>
+                <div class="form-group"><label>Contraseña Nueva</label><input class="form-control" type="password"></div>
+                <button class="btn btn-primary" type="button">Cambiar</button>
+                <button class="btn btn-danger" type="button" data-dismiss="modal">Cerrar</button>
+            </form></div>
+        </div></div>
+    </div>
+    <div id="logout" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog"><div class="modal-content">
+            <div class="modal-header"><h5 class="modal-title text-dark">Pregunta</h5><button class="close" data-dismiss="modal"><span>&times;</span></button></div>
+            <div class="modal-body"><p class="h5 text-dark">¿Está seguro que desea salir?</p></div>
+            <div class="modal-footer"><a href="index.html" class="btn btn-danger">Si</a><button class="btn btn-primary" data-dismiss="modal">No</button></div>
+        </div></div>
+    </div>
+    <script src="../Assets/js/jquery.min.js"></script>
+    <script src="../Assets/js/bootstrap.bundle.min.js"></script>
+    <script src="../Assets/js/front.js"></script>
+    <script src="../Assets/js/all.min.js"></script>
+    <script src="../Assets/js/jquery.dataTables.min.js"></script>
+    <script src="../Assets/DataTables/DataTables-1.10.21/js/dataTables.bootstrap4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#Table').DataTable({
+                language: {"emptyTable":"No hay datos","info":"Mostrando _START_ a _END_ de _TOTAL_ registros","infoEmpty":"Mostrando 0 a 0 de 0 registros","search":"Buscar:","zeroRecords":"No se encontraron coincidencias","lengthMenu":"Mostrar _MENU_ registros","paginate":{"first":"Primero","last":"Ultimo","next":"Próximo","previous":"Anterior"}}
+            });
+        });
+    </script>
+</body>
+</html>

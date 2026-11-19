@@ -1,0 +1,54 @@
+.sidebar-dark-blue {
+    background: rgb(2,0,36)!important;
+    background: linear-gradient(34deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 45%, rgba(0,212,255,1) 100%)!important;
+}
+
+.sidebar-dark-blue3 {
+    background: rgb(2,0,36)!important;
+background: linear-gradient(223deg, rgba(2,0,36,1) 0%, rgba(0,123,255,1) 100%)!important;
+    
+}
+
+.sidebar-dark-blue2 {
+    height: 100vh;
+    background: rgb(2,0,36);
+    background: linear-gradient(308deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 45%, rgba(0,212,255,1) 100%);        
+}
+.sidebar-dark-blue4 {
+    background: rgb(2,0,36);    
+}
+
+
+.sidebar-dark-pacai {
+    background: rgb(175,195,34);
+    background: radial-gradient(circle, rgba(175,195,34,1) 0%, rgba(8,135,14,1) 100%);
+}
+
+.sidebar-dark-suave {
+    background: rgb(39,50,238);
+background: radial-gradient(circle, rgba(39,50,238,1) 0%, rgba(108,109,156,1) 69%, rgba(237,235,9,1) 100%);
+}
+
+.sidebar-dark-ama {
+    background: rgb(39,50,238);
+background: radial-gradient(circle, rgba(39,50,238,1) 0%, rgba(237,235,9,1) 100%);
+}
+
+.mi-boton {
+    background-image: linear-gradient(to right, rgb(2,0,36), rgba(9,9,121,1)); /* Cambia los valores de colores para tu degradado deseado */
+    color: #FFFFFF;
+    padding: 10px 20px;
+    font-size: 18px;
+    /* Otros estilos adicionales para el botón */
+}
+
+
+.tableAzul {
+    background: rgb(39,50,238);
+    background: radial-gradient(circle, rgba(39,50,238,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+
+.bg-elemento {
+    background-color: hsla(0, 100%, 50%, 0.1); /* Rojo con una transparencia del 50% */
+  }
